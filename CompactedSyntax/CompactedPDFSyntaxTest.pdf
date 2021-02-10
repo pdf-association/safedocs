@@ -26,7 +26,7 @@
 <</Type/Catalog/MarkInfo<<%comment after dictionary start token
 /Marked true/Suspects true%comment after a boolean
 /UserProperties true>>/StructTreeRoot null/AA<</WP<</S/JavaScript/JS(//JavaScript comment
-app.alert\(\"Document Will Print Action!\"\))>>>>/Pages 3 0 R>>%comment after dictionary close token
+app.alert\( "Document Will Print Action!!"\))>>>>/Pages 3 0 R>>%comment after dictionary close token
 endobj
 2 0 obj
 endobj
