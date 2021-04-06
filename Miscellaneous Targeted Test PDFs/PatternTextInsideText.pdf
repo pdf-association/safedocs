@@ -1,0 +1,77 @@
+%PDF-1.5
+%µ¶
+
+1 0 obj
+<</Type/Catalog/Outlines 2 0 R/Pages 3 0 R>>
+endobj
+
+2 0 obj
+<</Type/Outlines/Count 0>>
+endobj
+
+3 0 obj
+<</Type/Pages/Kids[4 0 R]/Count 1>>
+endobj
+
+4 0 obj
+<</Type/Page/Parent 3 0 R/MediaBox[0 0 130 130]/Contents 5 0 R/Resources<</Font<</F1 6 0 R>>/Pattern<</P1 7 0 R>>>>>>
+endobj
+
+5 0 obj
+<</Length 266>>
+stream
+% Content stream is 150pt X and O placed on top of each other (achieved via BT/ET)
+/Pattern cs /P1 scn % Set /P1 pattern as fill
+2 w % stroke width = 2
+0 0 1 RG % Blue stroke
+BT
+  2 Tr % Fill & stroke text
+  /F1 150 Tf (X) Tj
+ET
+BT
+  /F1 150 Tf (O) Tj
+ET
+
+endstream
+endobj
+
+6 0 obj
+<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>
+endobj
+
+7 0 obj
+<</Type/Pattern/PaintType 1/PatternType 1/TilingType 2/Matrix[.2 0 0 .2 0 0]/XStep 50/YStep 30/BBox[0 0 60 60]/Resources<</Font<</F1 8 0 R>>>>/Length 91>>
+stream
+BT
+  /F1 4 Tf
+  10 0 0 10 1 1 Tm
+  0 Tc
+  0 Tw
+  1 0 0 rg % Red fill
+  (abc) Tj
+ET
+
+endstream
+endobj
+
+8 0 obj
+<</Type/Font/Subtype/Type1/BaseFont/Times-Italic>>
+endobj
+
+xref
+0 9
+0000000000 65536 f 
+0000000016 00000 n 
+0000000077 00000 n 
+0000000120 00000 n 
+0000000172 00000 n 
+0000000306 00000 n 
+0000000622 00000 n 
+0000000686 00000 n 
+0000000966 00000 n 
+
+trailer
+<</Size 9/Root 1 0 R>>
+startxref
+1033
+%%EOF

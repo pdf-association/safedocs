@@ -1,0 +1,62 @@
+%PDF-1.5
+1 0 obj
+<< /Type /Catalog /Outlines 2 0 R /Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [ 4 0 R] /Count 1 >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 3 0 R /MediaBox [0 0 130 130] /Contents 5 0 R
+/Resources << 
+  /Font << /F1 6 0 R >>
+  /Pattern << /P1 7 0 R >>
+  >>
+>>
+endobj
+5 0 obj
+<< /Length 0 >>
+stream
+% Content stream is 150pt X and O placed on top of each other (achieved via BT/ET)
+/Pattern cs /P1 scn % Set /P1 pattern as fill
+2 w % stroke width = 2
+0 0 1 RG % Blue stroke
+BT
+  2 Tr % Fill & stroke text
+  /F1 150 Tf (X) Tj
+ET
+BT
+  /F1 150 Tf (O) Tj
+ET
+endstream
+endobj
+6 0 obj
+% Helvetica (sans-serif) is Standard 14 Font so don't need to embed
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+7 0 obj
+% Pattern - note same resource name for font with content stream to test inheritance!
+<< /Type /Pattern /PaintType 1 /PatternType 1 /TilingType 2 /Matrix [0.2 0 0 0.2 0 0] /XStep 50 /YStep 30 /BBox [0 0 60 60]
+/Resources << /Font << /F1 8 0 R >> >>
+/Length 0
+>>
+stream
+BT
+  /F1 4 Tf
+  10 0 0 10 1 1 Tm
+  0 Tc
+  0 Tw
+  1 0 0 rg % Red fill
+  (abc) Tj
+ET
+endstream
+endobj
+8 0 obj
+% Times-Italic (serif) is Standard 14 Font so don't need to embed
+<< /Type /Font /Subtype /Type1 /BaseFont /Times-Italic >>
+endobj
+trailer
+<< /Root 1 0 R /Size 9 >>
+%%EOF
