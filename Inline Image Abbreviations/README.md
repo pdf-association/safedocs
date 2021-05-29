@@ -57,5 +57,12 @@ Here is the output from some failing viewers:
 ![Viewer3](Viewer3.png)
 ![Viewer4](Viewer4.png)
 
+
+And if test 4 is nullified (i.e. it is converted to a valid inline image by commenting out this line `% /Filter [/A85]` by changing the first `SPACE` to a `%`), then this showed more failures:
+
+![Viewer1b](Viewer1b.png)
+![Viewer3b](Viewer3b.png)
+![Viewer4b](Viewer4b.png)
+
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
