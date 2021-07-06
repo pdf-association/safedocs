@@ -60,5 +60,12 @@ obsoleted October 2017 and replaced by:
 [RFC 8265 Preparation, Enforcement, and Comparison of Internationalized Strings Representing Usernames and Passwords](https://datatracker.ietf.org/doc/html/rfc8265) + [errata](https://www.rfc-editor.org/errata_search.php?rfc=8265&rec_status=0)
 </div>
 
+
+## Test case descriptions
+
+ * [Baseline](baseline/baseline.md)
+ * [Corrigendum #4](corrigendum4/corrigendum4.md)
+ * [Corrigendum #5](corrigendum5/corrigendum5.md)
+
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
