@@ -1,0 +1,142 @@
+%PDF-1.7
+%µ¶
+1 0 obj
+<</Type/Catalog/Outlines 2 0 R/Pages 3 0 R/Lang (en-US)>>
+endobj
+
+2 0 obj
+<</Type/Outlines/Count 0>>
+endobj
+
+3 0 obj
+<</Type/Pages/Kids[ 4 0 R]/Count 1>>
+endobj
+
+4 0 obj
+<</Type/Page/Parent 3 0 R/MediaBox[0 0 900 900]/Contents 7 0 R/Resources<</Font<</F1 5 0 R>>>>>>
+endobj
+
+5 0 obj
+<</Type/Font/Subtype/Type1/BaseFont/Helvetica>>
+endobj
+
+6 0 obj
+<</CreationDate(D:20210729)/Producer(Manual)/Creator(Peter Wyatt for SafeDocs)/Author(Peter Wyatt)/Subject(Parser handling of indirect references in content streams)/Title(Parser handling of indirect references in content streams)/Keywords(parser, content stream, ambiguous) >>
+endobj
+
+7 0 obj
+<</Length 2243>>
+stream
+q
+BT
+  0 0 0 rg % Black text
+  /F1 8 Tf
+  10 0 0 10 45 720 Tm
+  (Inline Image) Tj
+ET
+0 1 0 rg              % Green fill
+550 700 200 100 re f  % Paint green rectangle below image
+200 0 0 100 550 700 cm
+BI
+  /Width  20
+  /Height 10
+  /BPC     8
+  /CS    /DeviceRGB
+  /ACME_Private << /SomeDict << /Type /FooBar /Self 7 0 R >> >>
+  /Filter [/ASCIIHexDecode] 
+  /Length 1240
+ID
+ff0000ff0000ff0000ff0000ff0000ff
+0000ff0000ff0000ff0000ff0000ff00
+00ff0000ff0000ff0000ff0000ff0000
+ff0000ff0000ff0000ff0000ff0000ff
+ff00ffff00ffff00ffff00ffff00ffff
+00ffff00ffff00ffff00ffff00ffff00
+ffff00ffff00ffff00ffff00ffff00ff
+ff00ffff00ff0000ff0000ffff000000
+ff0000ff0000ffffff000000ffffff00
+ffff00ffff000000ffffff00ffff00ff
+ff000000ff0000ffffff00ffff00ffff
+00ff0000ff0000ffff00ffff000000ff
+ffff00ffff000000ff0000ffffff0000
+00ff0000ffffff00ffff000000ffffff
+00ffff000000ffffff00ffff00ff0000
+ff0000ffff00ffff000000ffffff00ff
+ff000000ffffff000000ffffff000000
+ffffff000000ffffff00ffff00ffff00
+ffff00ffff00ffff00ff0000ff0000ff
+ff00ffff000000ffffff00ffff000000
+ffffff000000ffffff000000ffffff00
+0000ffffff00ffff000000ff0000ffff
+ff00ffff00ff0000ff0000ffff00ffff
+000000ffffff00ffff000000ffffff00
+ffff00ffff000000ffffff00ffff0000
+00ffffff00ffff000000ffffff00ffff
+00ff0000ff0000ffff000000ff0000ff
+0000ffffff000000ffffff00ffff00ff
+ff000000ffffff00ffff00ffff000000
+ff0000ff0000ffffff00ffff00ff0000
+ff0000ffff00ffff00ffff00ffff00ff
+ff00ffff00ffff00ffff00ffff00ffff
+00ffff00ffff00ffff00ffff00ffff00
+ffff00ffff00ffff00ff0000ff0000ff
+0000ff0000ff0000ff0000ff0000ff00
+00ff0000ff0000ff0000ff0000ff0000
+ff0000ff0000ff0000ff0000ff0000ff
+0000ff0000ff0000 >
+EI
+Q
+
+q
+BT
+  0 0 0 rg % Black text
+  /F1 8 Tf
+  10 0 0 10 45 520 Tm
+  (Marked content) Tj
+ET
+/Span << /Lang (en-AU) /Self 7 0 R >> BDC
+	BT
+	  0 0 0 rg % Black text
+	  /F1 4 Tf
+	  10 0 0 10 45 460 Tm
+	  (Inside marked content) Tj
+	ET
+EMC
+Q
+
+q
+BT
+  0 0 0 rg % Black text
+  /F1 8 Tf
+  10 0 0 10 45 320 Tm
+  (Compatibility section) Tj
+ET
+BX
+	<< /SomeKey /SomeValue /InnerDict << /Key1 /Value1 /Self 7 0 R>> >> newoperator 
+	BT
+	  0 0 0 rg % Black text
+	  /F1 4 Tf
+	  10 0 0 10 45 260 Tm
+	  (Inside BX/EX, after unknown operator) Tj
+	ET
+EX
+Q
+endstream
+endobj
+
+xref
+0 8
+0000000000 65535 f
+0000000015 00000 n
+0000000093 00000 n
+0000000140 00000 n
+0000000197 00000 n
+0000000314 00000 n
+0000000382 00000 n
+0000000680 00000 n
+
+trailer
+<</Size 8/Info 6 0 R/Root 1 0 R>>
+startxref
+2981
+%%EOF
