@@ -9,9 +9,9 @@ The files in this corpus include:
 This test case should <span style="color:green">**PASS**</span>. It tests the parsing of direct (inline) PDF dictionaries in all areas of PDF content streams where the presence of a PDF dictionary (as denoted by `<<` and `>>` tokens) is syntactically valid. This includes marked content property list operands, inline image dictionary custom keys and between the PDF compatibility operators, `BX` and `EX` (Table 33, ISO 32000-2:2020). Within a compatibility section, *"[u]nrecognised operators (along with their operands) shall be ignored without error until the balancing EX operator is encountered"*.
 
 
-## [Dialect-ContentStreamsViaPropertyName.pdf](Dialect-ContentStreamsViaPropertyName.pdf)
+## [Dialect-ContentStreamsViaResourceNames.pdf](Dialect-ContentStreamsViaResourceNames.pdf)
 
-This test case should <span style="color:green">**PASS**</span> and is an extension of [Dialect-ContentStreams.pdf](Dialect-ContentStreams.pdf). It tests the parsing of direct (inline) PDF dictionaries in PDF content streams where a PDF dictionary is syntactically and when the value of a private dictionary key (i.e. a key not defined in the PDF specification) is specified using a named resource, as defined in the **Properties** resource sub-dictionary. In this case, the named resource is an indirect reference to the very same page content stream, which is perfectly syntactically valid and according to the PDF specification.
+This test case should <span style="color:green">**PASS**</span> and is an extension of [Dialect-ContentStreams.pdf](Dialect-ContentStreams.pdf). It tests the parsing of direct (inline) PDF dictionaries in PDF content streams where a PDF dictionary is syntactically valid and when the value of a private dictionary key (i.e. a key not defined in the PDF specification) is specified using a named resource, as defined in a **Resources**  sub-dictionary. Note that the **Properties** sub-dictionary *only applies* to marked-content operators, so additional custom keys in **Resources** are required to declar the named resources. In this case, the named resource is an indirect reference to the very same page content stream, which is syntactically valid.
 
 
 ## [Dialect-ContentStreamsWithIndirectRefs.pdf](Dialect-ContentStreamsWithIndirectRefs.pdf)
