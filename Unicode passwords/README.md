@@ -67,5 +67,11 @@ obsoleted October 2017 and replaced by:
  * [Corrigendum #4](corrigendum4/corrigendum4.md)
  * [Corrigendum #5](corrigendum5/corrigendum5.md)
 
+# Related work
+
+- T. Ullrich, “_Real-world String Comparison: How to handle Unicode sequences correctly_,” ACM Queue, vol. 19, no. 3, p. Pages 50:107-Pages 50:116, Jun. 2021, doi: 10.1145/3475965.3478522. https://queue.acm.org/detail.cfm?id=3478522
+
+- "Big List of Naughty Strings", https://github.com/minimaxir/big-list-of-naughty-strings
+
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
