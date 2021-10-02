@@ -11,7 +11,7 @@ The follow inline image key name abbreviations are defined in "Table 91 - Entrie
 | `Filter`           |  `F` |
 | `Height`           |  `H` |
 | `ImageMask`        |  `IM` |
-| `Interpolate`      |  `I` (uppercase I) |
+| `Interpolate`      |  `I` (uppercase i) |
 | `Length` (_PDF 2.0_) |  `L` |
 | `Width`            |  `W` |
 
