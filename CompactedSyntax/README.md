@@ -22,7 +22,7 @@ A key point is that PDF does **NOT** always require whitespace between tokens an
 * PDF dictionaries when written as direct objects: `<</SomeKey<</A/B>>>>`;
 * direct nested PDF arrays: `[[/A/B][/C/D]]`;
 * PDF hex strings: `<0a><0d>`; and
-* PDF literal strings: `(cat)(mat)`).
+* PDF literal strings: `(cat)(mat)`.
 
 However some characters (such as `PERCENT SIGN`) are often not handled correctly as a token delimiter - and this can lead to parser differentials, non-interoperable PDFs or worse - parser crashes.
 
