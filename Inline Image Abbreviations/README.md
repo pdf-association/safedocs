@@ -64,5 +64,11 @@ And if test 4 is nullified (i.e. it is converted to a valid inline image by comm
 ![Viewer3b](Viewer3b.png)
 ![Viewer4b](Viewer4b.png)
 
+# Related Publications
+
+- "[_Room for Disagreement_](https://galois.com/blog/2021/11/room-for-disagreement/)"; Bill Harris, Nichole Schimanski, Peter Wyatt; November 2, 2021.
+- "[_SafeDocs unearths PDF inline image issue_](https://www.pdfa.org/safedocs-unearths-pdf-inline-image-issue/)"; Peter Wyatt; November 8, 2021.
+- "[_SafeDocs - towards a more secure future_](https://youtu.be/2DZwaIOYGjA?t=652)" (YouTube, starting at 10'52); Peter Wyatt; PDF Days 2021 virtual event.
+
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
