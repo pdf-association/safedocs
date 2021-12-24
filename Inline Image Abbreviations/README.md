@@ -50,6 +50,28 @@ The PDF 2.0 test file is a pure text file with comments. By commenting out a few
 
 In some cases, PDF processors may struggle to recover from content stream errors and display all 8 test cases. In these cases, it is recommended to comment out the triggering inline image key(s) of the last visible test case and see if the PDF processor will then processor more of the PDF.
 
+## Notes on how this PDF was manually constructed
+
+* the file `image.raw` is a hand-coded (in a hex editor!) raw 20 x 10 pixmap, with 24 bits per RGB pixel (8 bits per component). It can be opened and visualized directly by tools such as [IrfanView](https://www.irfanview.com/) which can then also be used to "Save As" JPEG (`DCTDecode`) or JPEG 2000 (`JPXDecode`).
+
+* the following simple Linux shell commands can be used to convert any data to various stream formats suitable for direct inclusion into PDF. These commands can also be cascaded to create filter chains:
+
+```bash
+# To ASCIIHex:
+od -A n -v -t x1 < data.raw | sed -e 's/ *//g' > data.hex
+# then add a final ">" (EOD marker) when inserting into the PDF  
+
+# From ASCIIHex (can include the final ">" EOD marker):
+xxd -r -p < data.hex > data.raw
+
+# To FLATE:       
+zlib-flate -compress < data.raw > data.flate
+
+# From FLATE:
+zlib-flate -uncompress < data.flate > data.raw
+```
+
+# Sample Output from PDF viewers
 Here is the output from some failing viewers:
 
 ![Viewer1](Viewer1.png)
