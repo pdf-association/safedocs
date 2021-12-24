@@ -64,7 +64,7 @@ BI
   /BitsPerComponent  8
   /ColorSpace      /DeviceRGB
   /Filter          [/ASCIIHexDecode] 
-  /Length          1240
+  /Length          1276
 ID
 ff0000ff0000ff0000ff0000ff0000ff
 0000ff0000ff0000ff0000ff0000ff00
@@ -127,7 +127,7 @@ BI
   /BPC 8
   /CS  /RGB
   /F   [/AHx] 
-  /L   1240
+  /L   1276
 ID
 ff0000ff0000ff0000ff0000ff0000ff
 0000ff0000ff0000ff0000ff0000ff00
@@ -194,7 +194,7 @@ BI
   /BitsPerComponent 4
   /CS  /RGB
   /F   [/AHx] 
-  /L   1240
+  /L   1276
 ID
 ff0000ff0000ff0000ff0000ff0000ff
 0000ff0000ff0000ff0000ff0000ff00
@@ -259,7 +259,7 @@ BI
   /CS  /RGB
   /F   [/AHx] 
   /Filter [/A85]
-  /Length 1240
+  /Length 1276
 ID
 ff0000ff0000ff0000ff0000ff0000ff
 0000ff0000ff0000ff0000ff0000ff00
@@ -325,7 +325,7 @@ BI
   /CS          /RGB  %% COMMENT OUT THIS LINE TO SEE EFFECT!
   /ColorSpace  /3chanRGB
   /F   [/AHx] 
-  /Length 1240
+  /Length 1276
 ID
 ff0000ff0000ff0000ff0000ff0000ff
 0000ff0000ff0000ff0000ff0000ff00
@@ -391,7 +391,7 @@ BI
   /D      [ 0 1 0 1 0 1 ]  %% COMMENT OUT THIS LINE TO SEE EFFECT!
   /Decode [ 1 0 1 0 1 0 ]
   /F   [/AHx] 
-  /Length 1240
+  /Length 1276
 ID
 ff0000ff0000ff0000ff0000ff0000ff
 0000ff0000ff0000ff0000ff0000ff00
@@ -458,7 +458,7 @@ BI
   /I           false %% COMMENT OUT THIS LINE TO SEE EFFECT!
   /Interpolate true
   /F   [/AHx] 
-  /Length 1240
+  /Length 1276
 ID
 ff0000ff0000ff0000ff0000ff0000ff
 0000ff0000ff0000ff0000ff0000ff00
@@ -525,7 +525,7 @@ BI
   /F   [ /AHx /Fl ] 
   /DP  [ null << /Predictor 15 /Colors 3 /BitsPerComponent 8 /Columns 20 >> ] %% THIS IS REQUIRED TO VIEW IMAGE CORRECTLY
   /DecodeParms [ null null ] 
-  /Length 197
+  /Length 201
 ID
 28919d90510e80200c435be2fdaf5c3f
 a6653297280b2165e175050afb7500c0
