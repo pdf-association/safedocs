@@ -56,8 +56,13 @@ endobj
 6 0 obj
 <</Type/ExtGState/ca 0.33/CA 0.66%comment after a real
 >>endobj
+7 0 obj
+<</Subject(Compacted Syntax v3.0)%comment after literal string end
+/Title<436f6d7061637465642073796e746178>%comment after hex string end
+/Keywords(PDF,Compacted,Syntax,ISO 32000-2:2020)/CreationDate(D:20200317)/Author(Peter Wyatt)/Creator<48616e642d65646974>/Producer<48616e642d65646974>>>
+endobj
 xref
-0 7
+0 8
 0000000000 65535 f
 0000001228 00000 n
 0000001555 00000 n
@@ -65,12 +70,10 @@ xref
 0000002031 00000 n
 0000002428 00000 n
 0000003294 00000 n
+0000003369 00000 n
 trailer
 <</Root 1 0 R/Info%comment after name
-<</Subject(Compacted Syntax v3.0)%comment after literal string end
-/Title<436f6d7061637465642073796e746178>%comment after hex string end
-/Keywords(PDF,Compacted,Syntax,ISO 32000-2:2020)/CreationDate(D:20200317)/Author(Peter Wyatt)/Creator<48616e642d65646974>/Producer<48616e642d65646974>>>
-/ID[<18D6B641245C03FABE67D93AD879D6EC><6264992C92074533A46A019C7CF9BFB6>]/Size 7>>
+7 0 R/ID[<18D6B641245C03FABE67D93AD879D6EC><6264992C92074533A46A019C7CF9BFB6>]/Size 8>>
 startxref
-3369  
+3679  
 %%EOF
