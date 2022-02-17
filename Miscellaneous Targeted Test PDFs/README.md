@@ -67,5 +67,19 @@ Incorrect support includes:
 * no prompting of the user when the link annotation is clicked - potentially **UNSAFE** for users!
 * not following all 3 URI Action URLs - URI Action `Next` support is lacking
 
+# File layout and structure
+
+PDF is somewhat unusual as it requires processing from the end-of-file. In particular the PDF specification defines certain critical constructs as occurring before some other token, requiring PDF parser to correctly parse backwards. Parsing backwards is not a "natural" feature of most programming languages or regex...
+
+## [Dual-startxref.pdf](Dual-startxref.pdf)
+
+This handcrafted PDF has dual `startxref` entries just prior to the end-of-file marker `%%EOF`. Each `startxref` offset then points to a valid conventional cross-reference table with a particular visual rendering. According to the PDF specification in clause 7.7.7:
+
+> The last line of the file shall contain only the end-of-file marker, %%EOF. The two preceding lines shall contain, one per line and in order, the keyword **startxref** and the byte offset in the decoded stream from the beginning of the PDF file to the beginning of the xref keyword in the last cross-reference section.
+
+Thus the correct `startxref` is the **last** one in the file which will then use the **first** cross-reference table (as measured from top-of-file). This will then render a page using object 7 that displays a page saying "Second startxref" in red. **This is the correct output.**
+
+An incorrect processor will use the first `startxref` (as measured from top-of-file) which will then use the **second** cross-reference table (as measured from top-of-file). This will then render a page using a _different_ object 7 that displays a page saying "First startxref" in blue. **This is incorrect output** and indicates that the "backwards parsing" from `%%EOF` to locate the correct `startxref` is incorrect.
+
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
