@@ -83,5 +83,55 @@ An incorrect processor will use the first `startxref` (as measured from top-of-f
 
 ![Image](Dual-startxrefs.png)
 
+# Encodings
+
+## [utf16LE-test.pdf](utf16LE-test.pdf)
+ISO 32000-2:2020 officially only allows UTF-8, UTF-16BE and PDFDocEncoding for text strings, as illustrated in Figure 7. However various bug reports (such as [this one](https://github.com/pikepdf/pikepdf/issues/288)) state that both extant PDF files and parsers incorrectly support UTF-16LE. This PDF attempts to test those assertions.
+
+* The Unicode UTF16 `U+FEFF` BOM is the invisible zero-width non-breaking space/ZWNBSP character and thus shouldn't be visible in a Unicode-aware UI/GUI.
+* UTF-16LE is identified by the 2-byte leading byte order marker `U+FEFF` as FF FE (hex) and is NOT a fixed-width encoding.
+* UTF-16BE is identified by the 2-byte leading byte order marker `U+FEFF` as FE FF (hex) and is NOT a fixed-width encoding.
+* UTF-8 (PDF 2.0) is identified by the 3-byte leading byte order marker `EF BB BF` (hex) and is NOT a fixed-width encoding.
+* PDFDocEncoding does not have any leading markers.
+
+
+For ASCII characters encoded in UTF-16, the padding byte is always `00` (NUL) and this is also unlikely to be visible in GUIs. Thus if a UTF-16LE string containing the BOM and only ASCII bytes with every 2nd byte being NUL is processed as PDFDocEncoding by a parser (since the BOM is _not_ as defined in ISO 32000) then a UI/GUI is likely to display just the ASCII bytes (possibly with whitespace between each character and/or leading junk bytes).
+
+To more reliably determine if UTF-16LE support is enabled, Unicode values _beyond_ the 8-bit ASCII set need to be used, ideally where the upper byte is also a printable and visible ASCII value _**and**_ where the byte values form a valid Unicode sequence. Thus a UTF-16LE enabled PDF processor would display the Unicode character, but a non-UTF-16LE processor would display as dual 8-bit ASCII bytes (both of which would hopefully be visible). Printable bytes are ideally between `0x21` to `0x7F`, e.g., UTF-16LE `0x3022` (&#8752; UTF-16BE `U+2230`) might display as `0"` (byte `0x30` then byte `0x22`). Test strings also obviously need to have an even number of bytes in order to be valid UTF16.
+
+```
+ASCII:        "Hello world!"
+ASCII as hex:  48 65 6c 6c 6f 20 77 6f 72 6c 64 21
+
+Encoded as UTF-16BE (valid in PDF):
+\ufeff\u0048\u0065\u006c\u006c\u006f\u0020\u0077\u006f\u0072\u006c\u0064\u0021
+
+Encoded as UTF-16LE (not valid in PDF!):
+\ufffe\u4800\u6500\u6c00\u6c00\u6f00\u2000\u7700\u6f00\u7200\u6c00\u6400\u2100
+```
+
+See https://www.branah.com/unicode-converter for an interactive website that demonstrates this (but only shows UTF-16BE).
+
+For the purposes of this test file the following easy-to-recognize Unicode symbols are used (https://unicode-table.com/en/blocks/ is used as a reference):
+
+| Unicode | UTF-16BE | As ASCII | Name |
+| :-: | :-: | :-: | :-- |
+| &#8752;  | `U+2230` | `"0` | [Volume integral](https://unicode-table.com/en/2230/) |
+| &#10036; | `U+2734` | `'4` | [Eight pointed black star](https://unicode-table.com/en/2734/) |
+| &#12880; | `U+3250` | `2P` | [Partnership Sign](https://unicode-table.com/en/3250/) |
+| &#20837; | `U+5165` | `Qe` | [CJK Ideograph: enter, come in(to), join ](https://unicode-table.com/en/5165/) |
+| &#9290;  | `U+244a` | `$J` | [OCR Double Backslash](https://unicode-table.com/en/244a/) |
+
+```
+UTF-16BE: \ufeff\u2230\u2734\u3250\u5165\u244a
+As ASCII:         " 0   ' 4   2 P   Q e   $ J
+
+UTF-16LE: \ufffe\u3022\u3427\u5032\u6551\u4a24
+As ASCII:         0 "   4 '   P 2   e Q   J $
+```
+
+Multiple PDF features tested include outlines (a.k.a. bookmarks), optional content layer names, and DocInfo properties (often visible in a File | Properties dialog) as not all processors support all features. Both PDF hex string and literal strings are used, with explicit byte-order markers.
+
+
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
