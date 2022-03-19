@@ -132,6 +132,9 @@ As ASCII:         0 "   4 '   P 2   e Q   J $
 
 Multiple PDF features tested include outlines (a.k.a. bookmarks), optional content layer names, and DocInfo properties (often visible in a File | Properties dialog) as not all processors support all features. Both PDF hex string and literal strings are used, with explicit byte-order markers.
 
+![Image](utf16le-output.png)
+
+Left: UTF-16LE bookmarks as UTF-16LE, Right: UTF-16LE bookmarks interpreted as PDFDocEncoding
 
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
