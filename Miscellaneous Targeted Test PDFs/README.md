@@ -67,6 +67,14 @@ Incorrect support includes:
 * no prompting of the user when the link annotation is clicked - potentially **UNSAFE** for users!
 * not following all 3 URI Action URLs - URI Action `/Next` support is lacking
 
+## [uri-ismap-test.pdf](uri-ismap-test.pdf)
+
+URI Actions support a server-side "[image map](https://en.wikipedia.org/wiki/Image_map)" capability whereby the location of the users click in a PDF file is sent to a website via the [query string](https://en.wikipedia.org/wiki/Query_string) portion of a URL. This requires that the `UseMap` entry in a URI action is set to `true` and that the interactive viewer append the mouse click \(X,Y) location to the [query string](https://en.wikipedia.org/wiki/Query_string) portion of the URL. This test PDF uses the URL https://safedocs.pdfa.org/uri-ismap-test.html which displays the location of the users click as a red circle on the equivalent image on the webpage.
+
+Likely errors from interactive PDF viewers is missing support for the `UseMap` entry and thus only the URL itself is triggered, without any click \(X,Y) coordinates, or possibly inverted or incorrect \(X,Y) coordinates. Ideally all interactive viewers will display the full URL and ask for user confirmation _before_ invoking the URL so as to protect users from malicious PDFs!
+
+Use this test URL to see the correct behavior if the user was to click the bottom of the chandelier in the image: https://safedocs.pdfa.org/uri-ismap-test.html?419,154
+
 # File layout and structure
 
 PDF is somewhat unusual as it requires processing from the end-of-file. In particular the PDF specification defines certain critical constructs as occurring before some other token, requiring PDF parser to correctly parse backwards. Parsing backwards is not a "natural" feature of most programming languages or regex...

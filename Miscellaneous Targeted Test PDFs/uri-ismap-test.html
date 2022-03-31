@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>PDF URI Action IsMap target test page</title>
+</head>
+<body onload="myFunction()">
+<h1>Test page for PDF URI IsMap actions</h1>
+
+<p>As per Table 210 "<i>Additional entries specific to a URI action</i>" of <a href="https://www.pdfa.org/resource/iso-32000-pdf/">ISO 32000-2:2020</a>,
+the <b>URI</b> entry should be set to the full URL of this
+webpage and the <b>IsMap</b> entry should be set to <i>true</i>.
+</p>
+
+<pre>
+&lt;&lt;
+  /Type /Annot
+  /Subtype /Link
+  /Rect [0 0 720 523]
+  /A &lt;&lt; /S /URI /URI (https://safedocs.pdfa.org/uri-ismap-test.html) /IsMap true &gt;&gt;
+  ...
+&gt;&gt;
+</pre>
+
+<p>The location of each click will then get shown on this image (720 x 523 pixels) by processing received URLs of the
+form "<span style="font-family:monospace"><a href="https://safedocs.pdfa.org/uri-ismap-test.html?100,200" target="_blank">https://safedocs.pdfa.org/uri-ismap-test.html?100,200</a></span>":</p>
+
+<pre id="ReceivedURL">
+</pre>
+
+<p id="ErrorMsg" style="color:red;"></p>
+<p>X = <span id="Xcoord">x</span>, Y = <span id="Ycoord">y</span></p>
+
+<canvas id="canvas" width="720" height="523" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/b/ba/JoshuaReynoldsParty.jpg');background-position:center;background-size: 100% 100%;">
+  <p style="color:red;">Your browser doesn't support canvas!</p>
+</canvas>
+
+<script>
+function myFunction() {
+    document.getElementById('ErrorMsg').innerHTML = "";
+    document.getElementById('ReceivedURL').innerHTML = location.href;
+    var s = location.search;
+    if (s.startsWith("?")) {
+        var args = s.slice(1).split(",");
+        if (args.length != 2) {
+            document.getElementById('ErrorMsg').innerHTML = "Precisely 2 args separated by a COMMA are required!";
+        }
+        else {
+            document.getElementById('Xcoord').innerHTML = args[0];
+            document.getElementById('Ycoord').innerHTML = args[1];
+            var x = parseInt(args[0]);
+            var y = parseInt(args[1]);
+            if (Number.isNaN(x) || Number.isNaN(y)) {
+                document.getElementById('ErrorMsg').innerHTML = "Bad integer(s)!" ;
+            }
+            else if ((x < 0) || (y < 0) || (x > 720) || (y > 523)) {
+                document.getElementById('ErrorMsg').innerHTML = "Out of range value(s)!" ;
+            }
+            else {
+                document.getElementById('Xcoord').innerHTML = args[0];
+                // Draw a large red circle centred on (x,y) position
+                var can = document.getElementById('canvas');
+                var ctx = can.getContext('2d');
+                var radius = 5;
+                ctx.beginPath();
+                ctx.arc(x, y, radius, 0, 2 * Math.PI, false);
+                ctx.fillStyle = 'red';
+                ctx.fill();
+            }
+        }
+    }
+    else {
+        document.getElementById('ErrorMsg').innerHTML = "URL search portion did not start with '?'";
+    }
+}
+</script>
+</body>
+</html>
