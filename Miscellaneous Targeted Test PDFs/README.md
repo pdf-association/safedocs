@@ -97,7 +97,7 @@ An incorrect processor will use the first `startxref` (as measured from top-of-f
 ISO 32000-2:2020 officially only allows UTF-8, UTF-16BE and PDFDocEncoding for text strings, as illustrated in Figure 7. However various bug reports (such as [this one](https://github.com/pikepdf/pikepdf/issues/288)) state that both extant PDF files and parsers incorrectly support UTF-16LE. This PDF attempts to test those assertions.
 
 * The Unicode UTF16 `U+FEFF` BOM is the invisible zero-width non-breaking space/ZWNBSP character and thus shouldn't be visible in a Unicode-aware UI/GUI.
-* UTF-16LE is identified by the 2-byte leading byte order marker `U+FEFF` as FF FE (hex) and is NOT a fixed-width encoding.
+* UTF-16LE is identified by the 2-byte leading byte order marker `U+FFFE` as FF FE (hex) and is NOT a fixed-width encoding.
 * UTF-16BE is identified by the 2-byte leading byte order marker `U+FEFF` as FE FF (hex) and is NOT a fixed-width encoding.
 * UTF-8 (PDF 2.0) is identified by the 3-byte leading byte order marker `EF BB BF` (hex) and is NOT a fixed-width encoding.
 * PDFDocEncoding does not have any leading markers.
