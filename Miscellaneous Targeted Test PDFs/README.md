@@ -75,6 +75,14 @@ Likely errors from interactive PDF viewers is missing support for the `UseMap` e
 
 Use this test URL to see the correct behavior if the user was to click the bottom of the chandelier in the image: https://safedocs.pdfa.org/uri-ismap-test.html?419,154
 
+## [list-of-uri-actions.pdf](list-of-uri-actions.pdf)
+
+All PDF Actions support a tree(!) of actions that shall all be actioned (see clause 12.6.2). This provides a challenge to user interfaces to make sure that users are suitably informed as to URLs that will be followed (actioned) when using URI Actions. If PDF software supports the tree of actions, then all URLs should be confirmed with the user (the PDF spec has no processor requirements for this so it could be either together or individually). If PDF software only supports just a single URI Action then arguably it should be the first action in the tree (ISO 32000-2:2020 subclause 6.3.2.1 states that "_Each PDF processor chooses which subsets of PDF functionality to support. For each subset that the processor chooses to support, the processor shall comply with the applicable provisions in this document._" so arguably supporting just a single URI Action is partial support!)
+
+This PDF contains 2 simple cases:
+1. a singly linked list with 3 individual URI actions attached to the Link annotation outlined in green (https://pdfa.org then https://www.wikipedia.org/ then https://google.com).
+1. a slightly more complex tree of linked URI actions attached to the Link annotation outlined in red (http://pdf-issues.pdfa.org which is linked to an array with 2 URLs (https://www.darpa.mil/, https://github.com/) and where the 2nd URL in the array is then further linked to https://stackoverflow.com/)
+
 # File layout and structure
 
 PDF is somewhat unusual as it requires processing from the end-of-file. In particular the PDF specification defines certain critical constructs as occurring before some other token, requiring PDF parser to correctly parse backwards. Parsing backwards is not a "natural" feature of most programming languages or regex...
