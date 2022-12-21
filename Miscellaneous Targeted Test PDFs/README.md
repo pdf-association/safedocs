@@ -81,7 +81,13 @@ All PDF Actions support a tree(!) of actions that shall all be actioned (see cla
 
 This PDF contains 2 simple cases:
 1. a singly linked list with 3 individual URI actions attached to the Link annotation outlined in green (https://pdfa.org then https://www.wikipedia.org/ then https://google.com).
-1. a slightly more complex tree of linked URI actions attached to the Link annotation outlined in red (http://pdf-issues.pdfa.org which is linked to an array with 2 URLs (https://www.darpa.mil/, https://github.com/) and where the 2nd URL in the array is then further linked to https://stackoverflow.com/)
+1. a slightly more complex tree of linked URI actions attached to the Link annotation outlined in red (http://pdf-issues.pdfa.org which is linked to an array with 2 URLs (https://www.darpa.mil/ and https://github.com/) and where the 2nd URL in the array is then further linked to https://stackoverflow.com/)
+
+## [list-of-uri-actions-with-base.pdf](list-of-uri-actions-with-base.pdf)
+
+This test PDF is similar to [list-of-uri-actions.pdf](list-of-uri-actions.pdf), but also includes a Document Catalog URI dictionary with a `Base` key (Table 211 in ISO 32000-2:2020).
+
+The URIs being tested are a mixture of relative and absolute, and include missing and special (`data:`) schemes.
 
 # File layout and structure
 
