@@ -85,9 +85,9 @@ This PDF contains 2 simple cases:
 
 ## [list-of-uri-actions-with-base.pdf](list-of-uri-actions-with-base.pdf)
 
-This test PDF is similar to [list-of-uri-actions.pdf](list-of-uri-actions.pdf), but also includes a Document Catalog URI dictionary with a `Base` key (Table 211 in ISO 32000-2:2020).
+This test PDF is similar to [list-of-uri-actions.pdf](list-of-uri-actions.pdf), but also includes a Document Catalog URI dictionary with a `Base` key (Table 211 in ISO 32000-2:2020). The Link Annotations also include an appearance stream and have the highlight mode set to invert on click/mouse down.
 
-The URIs being tested are a mixture of relative and absolute, and include missing and special (`data:`) schemes.
+The URIs being tested are a mixture of relative and absolute, and include missing and special (`data:`) schemes. The PDF specification does not mandate or restrict the choice of URI schemes so different PDF processors can/will support different behaviours.
 
 # File layout and structure
 
