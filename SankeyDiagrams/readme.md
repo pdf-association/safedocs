@@ -8,7 +8,7 @@ The Python script creates a CSV file suitable for cutting & pasting to create a 
 
 
 ```
-usage: sankey-hack.py [-h] [-c CSVFILE] [-d] [-k] [-f] [-p PDFFILE]
+usage: sankey-pdf.py [-h] [-c CSVFILE] [-d] [-k] [-f] [-p PDFFILE]
 
 options:
   -h, --help            show this help message and exit
