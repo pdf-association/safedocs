@@ -1,0 +1,45 @@
+ICC Profile,Header,128,PaleGreen
+ICC Profile,Tag Table,64,PowderBlue
+ICC Profile,Tags,526
+Header,Profile size,4,PaleGreen
+Header,Preferred CMM type,4,PaleGreen
+Header,Profile version,4,PaleGreen
+Header,Profile/device class,4,PaleGreen
+Header,Color space of data,4,PaleGreen
+Header,PCS,4,PaleGreen
+Header,Creation date/time,12,PaleGreen
+Header,Signature,4,PaleGreen
+Header,Flags,4,PaleGreen
+Header,Manufacturer,4,PaleGreen
+Header,Device model,4,PaleGreen
+Header,Device attributes,8,PaleGreen
+Header,Rendering intent,4,PaleGreen
+Header,PCS illuminant,4,PaleGreen
+Header,Profile creator,4,PaleGreen
+Header,Signature,4,PaleGreen
+Header,Profile ID,16,PaleGreen
+Header,Reserved,28,red
+Tag Table,Tag Count,4,PowderBlue
+Tag Table,'desc',4,PowderBlue
+Tag Table,'cprt',4,PowderBlue
+Tag Table,'wtpt',4,PowderBlue
+Tag Table,'chad',4,PowderBlue
+Tag Table,'A2B0',4,PowderBlue
+'desc',profileDescriptionTag,72
+'cprt',copyrightTag,310
+'cprt',Padding 2,2,red
+'wtpt',mediaWhitePointTag,20
+'chad',chromaticAdaptationTag,44
+'A2B0',AToB0Tag,80
+profileDescriptionTag,desc,4
+profileDescriptionTag,Reserved,4,red
+profileDescriptionTag,'desc' ASCII,21
+profileDescriptionTag,'desc' Unicode Language Code,4
+profileDescriptionTag,'desc' Unicode Length,4
+profileDescriptionTag,'desc' Unicode,42
+profileDescriptionTag,'desc' ScriptCode code,2
+profileDescriptionTag,'desc' ScriptCode length,1
+profileDescriptionTag,'desc' Mac dsecription,2
+copyrightTag,text,4
+copyrightTag,Reserved,4,red
+copyrightTag,'cprt' ASCII,140
