@@ -30,6 +30,8 @@ A matrix document (also a PDF) describing the 121 possible token pairings is pro
 
 The provided PDF test file has been carefuly hand-crafted to use a valid but highly compacted syntax (i.e. avoidance of whitespace) with hopefully(!) all combinations of permitted adjacent PDF tokens/character pairs. This is constructed for both the body of the PDF file as well as in a content stream (for those token pairs permitted in content streams). The data is ordered such that the test data occurs before the necessary valid PDF constructs required to make a valid PDF so that a parser must first process the compacted token and character pairings. The PDF file can be opened in most text editors for inspection, however do **NOT** re-save or repair this file!! It is specifically targeted at technical software developers of PDF lexical analyzers. A correct rendering (visual appearance) of this PDF alone does **NOT** guarantee that a PDF processor correctly processes tokens according to all the PDF rules - an analysis of the parsed token stream or confirmation of the constructed PDF DOM against the PDF file is required.
 
+File `CompactedPDFSyntaxTest.pdf.json` provides a JSON representation of the PDF test file and can be used to assert correctness of the PDF lexical analyzer.
+
 ___
 *This material is based upon work supported by the Defense Advanced Research Projects Agency (DARPA) under Contract No. HR001119C0079. Any opinions, findings and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Defense Advanced Research Projects Agency (DARPA). Approved for public release.*
 
